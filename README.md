@@ -1,4 +1,4 @@
-# Python Beginner Projects
+# Python Mini Projects
 
 This repository is a  collection of Python scripts and mini-games, developed as part of my personal learning and coursework while taking my Master's in Applied Technologies. These projects demonstrate key programming skills in an accessible and engaging way.
 
