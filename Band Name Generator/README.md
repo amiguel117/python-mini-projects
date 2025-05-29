@@ -11,6 +11,9 @@ This simple Python script generates a fun band name based on the user's input.
 Which city did you grow up in?
 
 Tokyo
+
 What's your pet's name?
+
 Shadow
+
 Your band name could be Tokyo Shadow
