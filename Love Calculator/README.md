@@ -1,4 +1,4 @@
-# Love Calculator 💘
+# Love Calculator
 
 This fun script calculates a "love score" based on the names of two people.
 
