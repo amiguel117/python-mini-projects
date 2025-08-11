@@ -14,6 +14,7 @@ This repository is a collection of Python scripts and mini-games, developed as p
 | Maze Escape          | Simple AI that escapes a maze (logic script)     |
 | Hangman              | Word guessing game with ASCII stages             |
 | Love Calculator      | Calculates a fun compatibility score from names  |
+| Caesar Cipher        | Encrypts or decrypts text using shift cipher     |
 
 ## 💡 Skills Demonstrated
 
