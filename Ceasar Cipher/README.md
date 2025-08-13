@@ -1,4 +1,4 @@
-# Caesar Cipher 🔐
+# Caesar Cipher 
 
 A simple implementation of the Caesar Cipher encryption algorithm in Python.
 
