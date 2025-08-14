@@ -14,7 +14,7 @@ def ceasar(direction, original_text, shift_amount):
         for letters in original_text:
             shifted_letters = (alphabet.index(letters) + (shift_amount)) % len(alphabet)
             cipher_text += alphabet[shifted_letters]
-        print(f'Here is the decoded result: {cipher_text}')
+        print(f'Here is the encoded result: {cipher_text}')
     elif direction == 'decode':
         for letters in original_text:
             shifted_letters = (alphabet.index(letters) + (shift_amount * -1)) % len(alphabet)
