@@ -8,23 +8,19 @@ text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
 
-def encrypt(original_text, shift_amount):
+def ceasar(direction, original_text, shift_amount):
     cipher_text = ''
-    for letters in original_text:
-        shifted_letters = (alphabet.index(letters) + shift_amount) % len(alphabet)
-        cipher_text += alphabet[shifted_letters]
-    print(f'Here is the encoded result: {cipher_text}')
+    if direction == 'encode':
+        for letters in original_text:
+            shifted_letters = (alphabet.index(letters) + (shift_amount)) % len(alphabet)
+            cipher_text += alphabet[shifted_letters]
+        print(f'Here is the decoded result: {cipher_text}')
+    elif direction == 'decode':
+        for letters in original_text:
+            shifted_letters = (alphabet.index(letters) + (shift_amount * -1)) % len(alphabet)
+            cipher_text += alphabet[shifted_letters]
+        print(f'Here is the decoded result: {cipher_text}')
 
 
-def decrypt(original_text, shift_amount):
-    cipher_text = ''
-    for letters in original_text:
-        shifted_letters = (alphabet.index(letters) + (shift_amount * -1)) % len(alphabet)
-        cipher_text += alphabet[shifted_letters]
-    print(f'Here is the decoded result: {cipher_text}')
 
-
-if direction == 'encode':
-    encrypt(original_text=text, shift_amount=shift)
-elif direction == 'decode':
-    decrypt(original_text=text, shift_amount=shift)
+ceasar(direction, original_text=text, shift_amount=shift)
