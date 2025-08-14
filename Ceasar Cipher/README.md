@@ -1,18 +1,18 @@
 # Caesar Cipher 
 
-A simple implementation of the Caesar Cipher encryption algorithm in Python.
+A Python implementation of the classic Caesar Cipher encryption and decryption algorithm.
 
 ## How It Works
-- The user chooses whether to **encode** (encrypt) or **decode** (decrypt) a message.
-- The user provides a message and a shift number.
-- Each letter is shifted forward in the alphabet by the given number to produce the encoded message.
+- User chooses whether to **encode** (encrypt) or **decode** (decrypt) a message.
+- The program takes a message and a numeric shift value.
+- Each letter is shifted forward (encode) or backward (decode) in the alphabet based on the shift.
+- Wrap-around is handled using modulo arithmetic.
 
 ## Features
-- Converts all input to lowercase for consistency.
-- Uses a fixed alphabet list for letter shifting.
-- Simple and beginner-friendly example of encryption.
+- Supports both encoding and decoding.
+- Wrap-around logic ensures shifting works at the end of the alphabet.
+- Beginner-friendly demonstration of encryption concepts.
 
-## Example
 Type 'encode' to encrypt, type 'decode' to decrypt:
 
 encode
@@ -20,8 +20,9 @@ Type your message:
 hello
 Type the shift number:
 5
-Here is the encoded result: mjqqt
+Here is the decoded result: mjqqt
 
 
-
-> Note: Current version only supports lowercase letters and encoding. Decoding logic can be added by reversing the shift.
+## Notes
+- Only supports lowercase alphabetic characters.
+- Spaces, numbers, and symbols are not handled in this version.
