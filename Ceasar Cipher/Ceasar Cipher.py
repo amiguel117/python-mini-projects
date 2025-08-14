@@ -12,8 +12,19 @@ def encrypt(original_text, shift_amount):
     cipher_text = ''
     for letters in original_text:
         shifted_letters = (alphabet.index(letters) + shift_amount) % len(alphabet)
-
         cipher_text += alphabet[shifted_letters]
     print(f'Here is the encoded result: {cipher_text}')
 
-encrypt(original_text=text, shift_amount=shift)
+
+def decrypt(original_text, shift_amount):
+    cipher_text = ''
+    for letters in original_text:
+        shifted_letters = (alphabet.index(letters) + (shift_amount * -1)) % len(alphabet)
+        cipher_text += alphabet[shifted_letters]
+    print(f'Here is the decoded result: {cipher_text}')
+
+
+if direction == 'encode':
+    encrypt(original_text=text, shift_amount=shift)
+elif direction == 'decode':
+    decrypt(original_text=text, shift_amount=shift)
