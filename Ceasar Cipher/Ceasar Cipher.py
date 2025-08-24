@@ -1,5 +1,3 @@
-from operator import index
-from pydoc import plaintext
 from art import logo
 print(logo)
 
@@ -14,13 +12,24 @@ def ceasar(direction, original_text, shift_amount):
     cipher_text = ''
     if direction == 'encode':
         for letters in original_text:
-            shifted_letters = (alphabet.index(letters) + (shift_amount)) % len(alphabet)
-            cipher_text += alphabet[shifted_letters]
+
+            if letters not in alphabet:
+                cipher_text += letters
+            else:
+                shifted_letters = (alphabet.index(letters) + (shift_amount)) % len(alphabet)
+                cipher_text += alphabet[shifted_letters]
+
         print(f'Here is the {direction} result: {cipher_text}')
+
+
     elif direction == 'decode':
         for letters in original_text:
-            shifted_letters = (alphabet.index(letters) + (shift_amount * -1)) % len(alphabet)
-            cipher_text += alphabet[shifted_letters]
+            if letters not in alphabet:
+                cipher_text += letters
+            else:
+                shifted_letters = (alphabet.index(letters) + (shift_amount * -1)) % len(alphabet)
+                cipher_text += alphabet[shifted_letters]
+
         print(f'Here is the {direction} result: {cipher_text}')
 
 
